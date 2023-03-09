@@ -271,8 +271,8 @@ class MindMap:
             args=(node,)
         )
 
-    def visualize(self, graph_type: Literal["agraph", "networkx", "graphviz"]) -> None:
-    # def visualize(self, graph_type: Literal["agraph", "networkx"]) -> None:
+    # def visualize(self, graph_type: Literal["agraph", "networkx", "graphviz"]) -> None:
+    def visualize(self, graph_type: Literal["agraph", "networkx"]) -> None:
         """Visualize the mindmap as a graph a certain way depending on the `graph_type`.
 
         Args:
@@ -341,8 +341,8 @@ def main():
 
     st.sidebar.title("AI Mind Map Generator")
 
-    graph_type = st.sidebar.radio("Type of graph", options=["agraph", "networkx", "graphviz"])
-    # graph_type = st.sidebar.radio("Type of graph", options=["agraph", "networkx"])
+    # graph_type = st.sidebar.radio("Type of graph", options=["agraph", "networkx", "graphviz"])
+    graph_type = st.sidebar.radio("Type of graph", options=["agraph", "networkx"])
     
     empty = mindmap.is_empty()
     reset = empty or st.sidebar.checkbox("Reset mind map", value=False)
