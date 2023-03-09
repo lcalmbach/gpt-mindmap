@@ -19,9 +19,10 @@ st.set_page_config(page_title="AI Mind Maps", layout="wide")
 
 COLOR = "cyan"
 FOCUS_COLOR = "red"
+LOCAL_HOST = 'liestal'
 
 # openai.api_key = os.getenv("OPENAI_API_KEY")
-if socket.gethostname().lower() == 'liestal':
+if socket.gethostname().lower() == LOCAL_HOST:
     openai.api_key = os.environ['OPENAI_API_KEY']
 else:
     openai.api_key = st.secrets['OPENAI_API_KEY']
